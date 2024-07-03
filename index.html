@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios Parte 1</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Pagina de Ejercicios</h1>
+
+        
+        <button class="collapsible">Procesos Selectivos</button>
+        <div class="content">
+            <button class="exercise-btn" onclick="showExercise('exercise1')">Ejercicio 1</button>
+            <button class="exercise-btn" onclick="showExercise('exercise2')">Ejercicio 2</button>
+            <button class="exercise-btn" onclick="showExercise('exercise3')">Ejercicio 3</button>
+            <button class="exercise-btn" onclick="showExercise('exercise4')">Ejercicio 4</button>
+            <button class="exercise-btn" onclick="showExercise('exercise5')">Ejercicio 5</button>
+        </div>
+
+        <button class="collapsible">Bucles</button>
+        <div class="content">
+            <button class="exercise-btn" onclick="showExercise('exercise6')">Ejercicio 1</button>
+            <button class="exercise-btn" onclick="showExercise('exercise7')">Ejercicio 2</button>
+            <button class="exercise-btn" onclick="showExercise('exercise8')">Ejercicio 3o</button>
+            <button class="exercise-btn" onclick="showExercise('exercise9')">Ejercicio 4</button>
+            <button class="exercise-btn" onclick="showExercise('exercise10')">Ejercicio 5</button>
+            <button class="exercise-btn" onclick="showExercise('exercise11')">Ejercicio 6</button>
+            <button class="exercise-btn" onclick="showExercise('exercise12')">Ejercicio 7</button>
+            <button class="exercise-btn" onclick="showExercise('exercise13')">Ejercicio 8</button>
+        </div>
+
+        <button class="collapsible">Arreglos</button>
+        <div class="content">
+            <button class="exercise-btn" onclick="showExercise('exercise14')">Ejercicio 1</button>
+            <button class="exercise-btn" onclick="showExercise('exercise15')">Ejercicio 2</button>
+            <button class="exercise-btn" onclick="showExercise('exercise16')">Ejercicio 3</button>
+            <button class="exercise-btn" onclick="showExercise('exercise17')">Ejercicio 4</button>
+            <button class="exercise-btn" onclick="showExercise('exercise18')">Ejercicio 5</button>
+        </div>
+
+
+        <button class="collapsible">Cadenas</button>
+        <div class="content">
+            <button class="exercise-btn" onclick="showExercise('exercise19')">Ejercicio 1</button>
+            <button class="exercise-btn" onclick="showExercise('exercise20')">Ejercicio 2</button>
+            <button class="exercise-btn" onclick="showExercise('exercise21')">Ejercicio 3</button>
+            <button class="exercise-btn" onclick="showExercise('exercise22')">Ejercicio 4</button>
+            <button class="exercise-btn" onclick="showExercise('exercise23')">Ejercicio 5</button>
+            <button class="exercise-btn" onclick="showExercise('exercise24')">Ejercicio 6</button>
+            <button class="exercise-btn" onclick="showExercise('exercise25')">Ejercicio 7</button>
+            <button class="exercise-btn" onclick="showExercise('exercise26')">Ejercicio 8</button>
+            <button class="exercise-btn" onclick="showExercise('exercise27')">Ejercicio 9</button>
+            <button class="exercise-btn" onclick="showExercise('exercise28')">Ejercicio 10</button>
+        </div>
+
+
+        <div id="exercise1" class="exercise-section" style="display:none;">
+            <h2>Ejercicio 1: Determinar si un número es par o impar</h2>
+            <p>Problema: Determinar si un número es par o impar.</p>
+            <form>
+                <label for="num1">Ingrese un número:</label>
+                <input type="number" id="num1" name="num1">
+                <button type="button" onclick="determineParity()">Verificar</button>
+            </form>
+            <p id="result1"></p>
+        <button class="exit-btn" onclick="hideExercise('exercise1')">Salir</button>
+        </div>
+
+        <div id="exercise2" class="exercise-section" style="display:none;">
+            <h2>Ejercicio 2: Determinar si un número es positivo, negativo o cero</h2>
+            <p>Problema: Determinar si un número es positivo, negativo o cero.</p>
+            <form>
+                <label for="num2">Ingrese un número:</label>
+                <input type="number" id="num2" name="num2">
+                <button type="button" onclick="determineSign()">Verificar</button>
+            </form>
+            <p id="result2"></p>
+            <button class="exit-btn" onclick="hideExercise('exercise2')">Salir</button>
+        </div>
+
+        <div id="exercise3" class="exercise-section" style="display:none;">
+            <h2>Ejercicio 3: Determinar si una persona es mayor de edad</h2>
+            <p>Problema: Determinar si una persona es mayor de edad.</p>
+            <form>
+                <label for="age">Ingrese la edad:</label>
+                <input type="number" id="age" name="age">
+                <button type="button" onclick="determineAge()">Verificar</button>
+            </form>
+            <p id="result3"></p>
+            <button class="exit-btn" onclick="hideExercise('exercise3')">Salir</button>
+        </div>
+
+        <div id="exercise4" class="exercise-section" style="display:none;">
+            <h2>Ejercicio 4: Determinar si un año es bisiesto</h2>
+            <p>Problema: Determinar si un año es bisiesto.</p>
+            <form>
+                <label for="year">Ingrese un año:</label>
+                <input type="number" id="year" name="year">
+                <button type="button" onclick="determineLeapYear()">Verificar</button>
+            </form>
+            <p id="result4"></p>
+            <button class="exit-btn" onclick="hideExercise('exercise4')">Salir</button>
+        </div>
+
+        <div id="exercise5" class="exercise-section" style="display:none;">
+            <h2>Ejercicio 5: Determinar el mayor de dos números</h2>
+            <p>Problema: Determinar el mayor de dos números.</p>
+            <form>
+                <label for="num3">Ingrese el primer número:</label>
+                <input type="number" id="num3" name="num3">
+                <label for="num4">Ingrese el segundo número:</label>
+                <input type="number" id="num4" name="num4">
+                <button type="button" onclick="determineGreater()">Verificar</button>
+            </form>
+            <p id="result5"></p>
+            <button class="exit-btn" onclick="hideExercise('exercise5')">Salir</button>
+        </div>
+
+
+        <div id="exercise6" class="exercise-section" style="display:none;">
+            <h2>Ejercicio 1: Presentar los números pares de n números</h2>
+            <p>Problema: Presentar los números pares de n números.</p>
+            <form>
+                <label for="num5">Ingrese un número:</label>
+                <input type="number" id="num5" name="num5">
+                <button type="button" onclick="showEvenNumbers()">Mostrar</button>
+            </form>
+            <p id="result6"></p>
+            <button class="exit-btn" onclick="hideExercise('exercise6')">Salir</button>
+        </div>
+
+        <div id="exercise7" class="exercise-section" style="display:none;">
+            <h2>Ejercicio 2: Presentar los divisores de un número</h2>
+            <p>Problema: Presentar los divisores de un número.</p>
+            <form>
+                <label for="num6">Ingrese un número:</label>
+                <input type="number" id="num6" name="num6">
+                <button type="button" onclick="showDivisors()">Mostrar</button>
+            </form>
+            <p id="result7"></p>
+            <button class="exit-btn" onclick="hideExercise('exercise7')">Salir</button>
+        </div>
+
+        <div id="exercise8" class="exercise-section" style="display:none;">
+            <h2>Ejercicio 3: Verificar si un número es perfecto</h2>
+            <p>Problema: Verificar si un número es perfecto.</p>
+            <form>
+                <label for="num7">Ingrese un número:</label>
+                <input type="number" id="num7" name="num7">
+                <button type="button" onclick="isPerfectNumber()">Verificar</button>
+            </form>
+            <p id="result8"></p>
+            <button class="exit-btn" onclick="hideExercise('exercise8')">Salir</button>
+        </div>
+
+        <div id="exercise9" class="exercise-section" style="display:none;">
+            <h2>Ejercicio 4: Verificar si un número es primo</h2>
+            <p>Problema: Verificar si un número es primo.</p>
+            <form>
+                <label for="num8">Ingrese un número:</label>
+                <input type="number" id="num8" name="num8">
+                <button type="button" onclick="isPrimeNumber()">Verificar</button>
+            </form>
+            <p id="result9"></p>
+            <button class="exit-btn" onclick="hideExercise('exercise9')">Salir</button>
+        </div>
+
+        <div id="exercise10" class="exercise-section" style="display:none;">
+            <h2>Ejercicio 5: Invertir un número</h2>
+            <p>Problema: Invertir un número dividiendo para diez.</p>
+            <form>
+                <label for="num9">Ingrese un número:</label>
+                <input type="number" id="num9" name="num9">
+                <button type="button" onclick="invertNumber()">Invertir</button>
+            </form>
+            <p id="result10"></p>
+            <button class="exit-btn" onclick="hideExercise('exercise10')">Salir</button>
+        </div>
+
+        <div id="exercise11" class="exercise-section" style="display:none;">
+            <h2>Ejercicio 6: Multiplicación por sumas sucesivas</h2>
+            <p>Problema: Multiplicación de dos números por sumas sucesivas.</p>
+            <form>
+                <label for="num10">Ingrese el primer número:</label>
+                <input type="number" id="num10" name="num10">
+                <label for="num11">Ingrese el segundo número:</label>
+                <input type="number" id="num11" name="num11">
+                <button type="button" onclick="multiplyByAddition()">Multiplicar</button>
+            </form>
+            <p id="result11"></p>
+            <button class="exit-btn" onclick="hideExercise('exercise11')">Salir</button>
+        </div>
+
+        <div id="exercise12" class="exercise-section" style="display:none;">
+            <h2>Ejercicio 7: División por restas sucesivas</h2>
+            <p>Problema: División de dos números por restas sucesivas.</p>
+            <form>
+                <label for="num12">Ingrese el primer número:</label>
+                <input type="number" id="num12" name="num12">
+                <label for="num13">Ingrese el segundo número:</label>
+                <input type="number" id="num13" name="num13">
+                <button type="button" onclick="divideBySubtraction()">Dividir</button>
+            </form>
+            <p id="result12"></p>
+            <button class="exit-btn" onclick="hideExercise('exercise12')">Salir</button>
+        </div>
+
+        <div id="exercise13" class="exercise-section" style="display:none;">
+            <h2>Ejercicio 8: Presentar la serie de Fibonacci</h2>
+            <p>Problema: Presentar la serie de Fibonacci de n números.</p>
+            <form>
+                <label for="num14">Ingrese un número:</label>
+                <input type="number" id="num14" name="num14">
+                <button type="button" onclick="showFibonacciSeries()">Mostrar</button>
+            </form>
+            <p id="result13"></p>
+            <button class="exit-btn" onclick="hideExercise('exercise13')">Salir</button>
+        </div>
+
+
+        <div id="exercise14" class="exercise-section" style="display:none;">
+            <h2>Ejercicio 1: Múltiplos de 5</h2>
+            <p>Problema: Presentar los números múltiplos de 5 de un arreglo.</p>
+            <form>
+                <label for="array1">Ingrese números separados por comas:</label>
+                <input type="text" id="array1" name="array1">
+                <button type="button" onclick="showMultiplesOf5()">Mostrar</button>
+            </form>
+            <p id="result14"></p>
+            <button class="exit-btn" onclick="hideExercise('exercise14')">Salir</button>
+        </div>
+
+        <div id="exercise15" class="exercise-section" style="display:none;">
+            <h2>Ejercicio 2: Promedio de números</h2>
+            <p>Problema: Calcular el promedio de los números de un arreglo.</p>
+            <form>
+                <label for="array2">Ingrese números separados por comas:</label>
+                <input type="text" id="array2" name="array2">
+                <button type="button" onclick="calculateAverage()">Calcular</button>
+            </form>
+            <p id="result15"></p>
+            <button class="exit-btn" onclick="hideExercise('exercise15')">Salir</button>
+        </div>
+
+        <div id="exercise16" class="exercise-section" style="display:none;">
+            <h2>Ejercicio 3: Mayor de los elementos</h2>
+            <p>Problema: Determinar el mayor de los elementos de un arreglo.</p>
+            <form>
+                <label for="array3">Ingrese números separados por comas:</label>
+                <input type="text" id="array3" name="array3">
+                <button type="button" onclick="findMaxElement()">Encontrar</button>
+            </form>
+            <p id="result16"></p>
+            <button class="exit-btn" onclick="hideExercise('exercise16')">Salir</button>
+        </div>
+
+        <div id="exercise17" class="exercise-section" style="display:none;">
+            <h2>Ejercicio 4: Nombres que no sean Ana</h2>
+            <p>Problema: Presentar los nombres que no sean "Ana" de un arreglo.</p>
+            <form>
+                <label for="array4">Ingrese nombres separados por comas:</label>
+                <input type="text" id="array4" name="array4">
+                <button type="button" onclick="showNamesNotAna()">Mostrar</button>
+            </form>
+            <p id="result17"></p>
+            <button class="exit-btn" onclick="hideExercise('exercise17')">Salir</button>
+        </div>
+
+        <div id="exercise18" class="exercise-section" style="display:none;">
+            <h2>Ejercicio 5: Pares de un arreglo desde el último</h2>
+            <p>Problema: Presentar los números pares de un arreglo recorridos desde el último elemento al primero.</p>
+            <form>
+                <label for="array5">Ingrese números separados por comas:</label>
+                <input type="text" id="array5" name="array5">
+                <button type="button" onclick="showEvenNumbersReverse()">Mostrar</button>
+            </form>
+            <p id="result18"></p>
+            <button class="exit-btn" onclick="hideExercise('exercise18')">Salir</button>
+        </div>
+
+
+        <div id="exercise19" class="exercise-section" style="display:none;">
+            <h2>Ejercicio 1: Imprimir caracteres</h2>
+            <p>Problema: Imprimir cada carácter de una cadena.</p>
+            <form>
+                <label for="str1">Ingrese una cadena:</label>
+                <input type="text" id="str1" name="str1">
+                <button type="button" onclick="printCharacters()">Imprimir</button>
+            </form>
+            <p id="result19"></p>
+            <button class="exit-btn" onclick="hideExercise('exercise19')">Salir</button>
+        </div>
+
+        <div id="exercise20" class="exercise-section" style="display:none;">
+            <h2>Ejercicio 2: Contar vocales</h2>
+            <p>Problema: Contar las vocales en una cadena.</p>
+            <form>
+                <label for="str2">Ingrese una cadena:</label>
+                <input type="text" id="str2" name="str2">
+                <button type="button" onclick="countVowels()">Contar</button>
+            </form>
+            <p id="result20"></p>
+            <button class="exit-btn" onclick="hideExercise('exercise20')">Salir</button>
+        </div>
+
+        <div id="exercise21" class="exercise-section" style="display:none;">
+            <h2>Ejercicio 3: Invertir una cadena</h2>
+            <p>Problema: Invertir una cadena.</p>
+            <form>
+                <label for="str3">Ingrese una cadena:</label>
+                <input type="text" id="str3" name="str3">
+                <button type="button" onclick="reverseString()">Invertir</button>
+            </form>
+            <p id="result21"></p>
+            <button class="exit-btn" onclick="hideExercise('exercise21')">Salir</button>
+        </div>
+
+        <div id="exercise22" class="exercise-section" style="display:none;">
+            <h2>Ejercicio 4: Contar palabras</h2>
+            <p>Problema: Contar palabras en una cadena.</p>
+            <form>
+                <label for="str4">Ingrese una cadena:</label>
+                <input type="text" id="str4" name="str4">
+                <button type="button" onclick="countWords()">Contar</button>
+            </form>
+            <p id="result22"></p>
+            <button class="exit-btn" onclick="hideExercise('exercise22')">Salir</button>
+        </div>
+
+        <div id="exercise23" class="exercise-section" style="display:none;">
+            <h2>Ejercicio 5: Reemplazar espacios con guiones</h2>
+            <p>Problema: Reemplazar espacios con guiones en una cadena.</p>
+            <form>
+                <label for="str5">Ingrese una cadena:</label>
+                <input type="text" id="str5" name="str5">
+                <button type="button" onclick="replaceSpaces()">Reemplazar</button>
+            </form>
+            <p id="result23"></p>
+            <button class="exit-btn" onclick="hideExercise('exercise23')">Salir</button>
+        </div>
+
+        <div id="exercise24" class="exercise-section" style="display:none;">
+            <h2>Ejercicio 6: Contar caracteres específicos</h2>
+            <p>Problema: Contar caracteres específicos en una cadena.</p>
+            <form>
+                <label for="str6">Ingrese una cadena:</label>
+                <input type="text" id="str6" name="str6">
+                <label for="char1">Ingrese el carácter:</label>
+                <input type="text" id="char1" name="char1" maxlength="1">
+                <button type="button" onclick="countSpecificCharacters()">Contar</button>
+            </form>
+            <p id="result24"></p>
+            <button class="exit-btn" onclick="hideExercise('exercise24')">Salir</button>
+        </div>
+
+        <div id="exercise25" class="exercise-section" style="display:none;">
+            <h2>Ejercicio 7: Eliminar caracteres específicos</h2>
+            <p>Problema: Eliminar caracteres específicos de una cadena.</p>
+            <form>
+                <label for="str7">Ingrese una cadena:</label>
+                <input type="text" id="str7" name="str7">
+                <label for="char2">Ingrese el carácter:</label>
+                <input type="text" id="char2" name="char2" maxlength="1">
+                <button type="button" onclick="removeSpecificCharacters()">Eliminar</button>
+            </form>
+            <p id="result25"></p>
+            <button class="exit-btn" onclick="hideExercise('exercise25')">Salir</button>
+        </div>
+
+        <div id="exercise26" class="exercise-section" style="display:none;">
+            <h2>Ejercicio 8: Convertir mayúsculas a minúsculas y viceversa</h2>
+            <p>Problema: Convertir mayúsculas a minúsculas y viceversa.</p>
+            <form>
+                <label for="str8">Ingrese una cadena:</label>
+                <input type="text" id="str8" name="str8">
+                <button type="button" onclick="toggleCase()">Convertir</button>
+            </form>
+            <p id="result26"></p>
+            <button class="exit-btn" onclick="hideExercise('exercise26')">Salir</button>
+        </div>
+
+        <div id="exercise27" class="exercise-section" style="display:none;">
+            <h2>Ejercicio 9: Eliminar espacios</h2>
+            <p>Problema: Eliminar espacios de una cadena.</p>
+            <form>
+                <label for="str9">Ingrese una cadena:</label>
+                <input type="text" id="str9" name="str9">
+                <button type="button" onclick="removeSpaces()">Eliminar</button>
+            </form>
+            <p id="result27"></p>
+            <button class="exit-btn" onclick="hideExercise('exercise27')">Salir</button>
+        </div>
+
+        <div id="exercise28" class="exercise-section" style="display:none;">
+            <h2>Ejercicio 10: Longitud de la palabra más larga</h2>
+            <p>Problema: Contar la longitud de la palabra más larga en una cadena.</p>
+            <form>
+                <label for="str10">Ingrese una cadena:</label>
+                <input type="text" id="str10" name="str10">
+                <button type="button" onclick="findLongestWord()">Contar</button>
+            </form>
+            <p id="result28"></p>
+            <button class="exit-btn" onclick="hideExercise('exercise28')">Salir</button>
+        </div>
+    </div>
+    <script src="/js/script.js"></script>
+</body>
+</html>

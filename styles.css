@@ -1,0 +1,133 @@
+@keyframes gradientBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+body {
+    background: linear-gradient(270deg, #2c3e50, #4c5c68, #2c3e50, #4c5c68);
+    background-size: 600% 600%;
+    animation: gradientBackground 15s ease infinite;
+    color: #ecf0f1;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    color: #ecf0f1;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #34495e;
+    color: #ecf0f1;
+    border: 2px solid #3498db;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+    background-color: #3498db;
+    color: #ffffff;
+}
+
+.collapsible {
+    background-color: #34495e;
+    color: #ecf0f1;
+    cursor: pointer;
+    padding: 10px 20px;
+    width: 100%;
+    border: none;
+    text-align: center;
+    outline: none;
+    font-size: 15px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.active, .collapsible:hover {
+    background-color: #3498db;
+    color: #ffffff;
+}
+
+.content {
+    display: none;
+    overflow: hidden;
+    background-color: #2c3e50;
+    padding: 10px;
+}
+
+.exercise-btn {
+    background-color: #34495e;
+    color: #ecf0f1;
+    border: 2px solid #3498db;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.exercise-section {
+    margin-top: 20px;
+    text-align: center;
+    background-color: rgba(44, 62, 80, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+form {
+    margin: 20px 0;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input {
+    margin-bottom: 10px;
+    padding: 8px;
+    width: 100%;
+    max-width: 300px;
+    border: 1px solid #3498db;
+    border-radius: 5px;
+}
+.exit-btn {
+    background-color: #e74c3c; /* Rojo oscuro para indicar salida */
+    color: #ecf0f1;
+    border: 2px solid #c0392b;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.exit-btn:hover {
+    background-color: #c0392b;
+    color: #ffffff;
+}
+
+
+#result, #result1, #result2, #result3, #result4, #result5, #result6, #result7, #result8, #result9, #result10, #result11, #result12, #result13, #result14, #result15, #result16, #result17, #result18, #result19, #result20, #result21, #result22, #result23, #result24, #result25, #result26, #result27, #result28 {
+    margin-top: 20px;
+    font-weight: bold;
+    background-color: rgba(52, 73, 94, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+}
